@@ -1,14 +1,16 @@
 import { Canvas } from '@react-three/fiber'
 import { Sky } from '@react-three/drei'
+import { Physics } from '@react-three/cannon'
 
 function App() {
   return (
-    <div>
-      <h1>LeanCraft</h1>
-      <Canvas>
-        <Sky />
-      </Canvas>
-    </div>
+    <Canvas>
+      <Sky sunPosition={[100, 100, 20]} />
+      <ambientLight intensity={0.5} />
+      <Physics>
+        ...
+      </Physics>
+    </Canvas>
   )
 }
 
